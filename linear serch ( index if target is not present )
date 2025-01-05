@@ -1,0 +1,24 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std  ;
+
+int main() {
+    int target ; 
+    cout << " enter the target of which u want to know "  ;
+    cin>> target ;
+    int array [6] =   { 1,2,4,6,9,10} ;
+    int answer ;
+    for ( int i = 0 ; i < 6 ; i ++)
+     { if ( array[i] == target)
+          { answer = i ;
+            break ;}
+       else if (array [i] < target &&  target < array[i+1])
+         { answer = (i + 1 );}
+     }
+         
+ cout << " target' index : " << answer ;        
+          
+          
+
+    return 0;
+}
