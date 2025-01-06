@@ -1,3 +1,6 @@
+
+
+its  is not insertion type method .
 {   int number [1000]; 
     int n ; 
     cout <<  " enter the sieze of array " ; 
