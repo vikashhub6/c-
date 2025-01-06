@@ -1,0 +1,36 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <vector>
+using namespace std ;
+int main() {
+    
+   // vector <int > v1 (5,2);
+  //  for ( int i = 0 ; i < 5; i ++)
+  //     cout <<  v1 [i] << " "    ;
+   //  cout << endl ;
+    // v1.insert (v1.begin() + 2 , 5);
+    // for (int c = 0 ; c < 5 ; c++)
+    //  cout << v1[c] << " ";
+     //vector <int> v2 ;
+     //v2.push_back (9);
+     // v2.push_back(3);
+    //  v2.pop_back();
+    //  cout << "size of v2:" << v2.size() ;
+   //   cout << "capacity of v2:"<< v2.capacity();//
+        // sorting in vector 
+    vector<int>ans ;
+    ans.push_back (7);
+    ans.push_back (9);
+    ans.push_back(6);
+    ans.push_back (76);
+    sort(ans.begin(),ans.end()) ; // its for increasing order 
+    sort (ans.begin(), ans.end(), greater<int>() ) ;  // its for decresing order
+    sort (ans.rbegin(),ans.rend()) ;// its for decresing order 
+    for ( int i= 0 ; i < ans.size() ; i ++)
+      cout << ans[i] << " " ;
+       // serch in binary serch 
+      cout << binary_search(ans.begin(), ans.end() , 9 );
+      // give index of particular element in element
+      cout << find(ans.begin(), ans.end() , 6)- ans.begin() << endl;
+    return 0;,
+}
