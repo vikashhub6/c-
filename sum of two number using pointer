@@ -1,0 +1,24 @@
+// Online C++ compiler to run C++ program online
+#include <iostream > 
+using namespace std ;
+int main  () {
+     // sum of two number
+    int   array [6]=  { 2 ,3,5,7,8,10};
+    int  target  ;
+    cout << "enter the value of target ";
+    cin >> target ;
+    int first = -1 ,second = -1;
+    int start = 0;
+    int last = 5;
+     while (start < last )
+     {      if (array[start]+ array[last] == target)
+              {first = array [start] ;
+              second = array [last];}
+            else if ( array[start] + array [last ]<target)
+             start ++;
+            else 
+             last --;}
+    cout << " two number are :" << first << " " << second;
+           
+    return 0;
+}
