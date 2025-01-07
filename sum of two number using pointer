@@ -13,8 +13,9 @@ int main  () {
      while (start < last )
      {      if (array[start]+ array[last] == target)
               {first = array [start] ;
-              second = array [last];}
-            else if ( array[start] + array [last ]<target)
+              second = array [last];
+               break;}
+          else if ( array[start] + array [last ]<target)
              start ++;
             else 
              last --;}
