@@ -1,0 +1,32 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<vector>
+using namespace std ;
+int main() {
+    // finding two number of target 
+    int array []= {  3,4,5,7,8,9};
+    int target ;
+    cout << " enter the value of target :" ;
+     cin >> target ;
+     int second ;
+     int count =0;
+     vector<int>answer;
+     for ( int i= 0 ; i <5 ; i++ )
+         { 
+          second= target - array[i] ;
+          for (int c = i+1 ; c< 6; c++)
+            { if ( second == array[c])
+                { answer.push_back(array[i]) ;
+                 answer.push_back( second);
+                 count += 1 ;
+                 break ;}
+            }
+              }
+       {  for (int d =0 ; d < count*2 ; d++)
+           cout << answer[d] << " " ;
+           
+       }
+         
+           
+    return 0;
+}
