@@ -7,9 +7,9 @@ using namespace std ;
 int main() { 
     int size ; 
     cout << " enter the value of size :";
-    cin >> size 
+    cin >> size ;
     
-     int array[];
+     int array[1000];
      cout << "enter the value of sieze which to formed";
      for ( int d =0 ; d< size  ; d++)
       { cin >> array[d] ; }
@@ -27,13 +27,57 @@ int main() {
         int new_size= (size-(i+1));
        vector<int> suffix(new_size);
        suffix[new_size-1]= array[size-1];
-       for (d = new_size-2 ;  d >=0 ; d--)
-       { suffix[d]= array[size-d]+ suffx[d+1]]
-           
+       for (int d = new_size-2 ;  d >=0 ; d--)
+       { suffix[d]= array[d+2]+ suffix[d+1];} // chat gpt telling replace d+2 by i +d+1 because overflow check it 
+
+        if ( prefix[i]== suffix[0])
+            {cout << "possible ";
+             break;} 
+             
+             
        }
+
+here ass we know that we have to do a lot of thing in  finding sufix because of dismatch in index of sufix and array  so we have find alter method below '
+
+#include <iostream>
+#include<vector>
+using namespace std ;
+
+
+int main() { 
+    int size ; 
+    cout << " enter the value of size :";
+    cin >> size ;
+    
+     int array[1000];
+     cout << "enter the value of sieze which to formed";
+     for ( int d =0 ; d< size  ; d++)
+      { cin >> array[d] ; }
        
+     
+     
+  for ( int i = 0 ; i < size; i ++)
+  
+  { 
+      vector<int>prefix(i+1);
+      prefix[0]= array[0];
       
+       for( int c =1 ; c <=i ; c++ )
+      {  prefix[c] = array[c]+ prefix[c-1];}
+       int sum =0 ;
+        {for (int d= 0  ; d< size ; d++)
+            sum += array[d];}
+         if ( prefix[i]== sum-prefix[i])
+           {cout << " possible bro "; }
   }
+  
+
+    return 0;
+}
+
+    
+      
+  
 
     return 0;
 }
