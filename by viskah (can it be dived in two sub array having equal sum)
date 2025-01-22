@@ -1,0 +1,39 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<vector>
+using namespace std ;
+
+
+int main() { 
+    int size ; 
+    cout << " enter the value of size :";
+    cin >> size 
+    
+     int array[];
+     cout << "enter the value of sieze which to formed";
+     for ( int d =0 ; d< size  ; d++)
+      { cin >> array[d] ; }
+       
+     
+     
+  for ( int i = 0 ; i < size; i ++)
+  
+  { 
+      vector<int>prefix(i+1);
+      prefix[0]= array[0];
+      
+       for( int c =1 ; c <=i ; c++ )
+      {  prefix[c] = array[c]+ prefix[c-1];}
+        int new_size= (size-(i+1));
+       vector<int> suffix(new_size);
+       suffix[new_size-1]= array[size-1];
+       for (d = new_size-2 ;  d >=0 ; d--)
+       { suffix[d]= array[size-d]+ suffx[d+1]]
+           
+       }
+       
+      
+  }
+
+    return 0;
+}
