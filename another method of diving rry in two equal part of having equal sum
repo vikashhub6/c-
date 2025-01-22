@@ -1,0 +1,26 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+  int  array [1000]={3,4,-2,5,8,20,-10,7} ;
+  string result = " bro it cant possibe ";
+    for (int i= 0 ; i< 7 ; i++)
+    {  int sum1= 0 ;
+        for ( int c = 0 ; c <=i ; c++  )
+           {sum1 += array[c];}
+         int sum2 = 0;  
+         
+           for (int d= i+1; d<8 ; d++)
+             { sum2 += array[d];}
+          if ( sum1==sum2)
+            {  result = " bro its possible ";
+                cout << result ;}
+          
+
+    
+    }
+ cout << result ; 
+
+  return 0;
+}
