@@ -1,0 +1,33 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<climits>
+using namespace std ;
+
+int main() {
+     int height[8] = {4,2,0,5,2,6,2,3};
+     
+     int store_water = 0 ;
+     int biggest_backward= INT_MIN;
+     int biggest_forward = INT_MIN;
+     int max_limit ;
+     for (int i = 1 ; i<7 ; i++)
+       {  int biggest_backward= INT_MIN;
+          int biggest_forward = INT_MIN;
+           if (height[i]<height[i-1]) // condition for storage of watr
+          { for ( int c =0 ; c <i ; c++)
+             { biggest_backward= max (height[c], biggest_backward);}
+            for ( int d = i+1;d<8; d++)     
+              {  biggest_forward = max(biggest_forward , height[d]);}
+               
+            max_limit  = min (biggest_backward , biggest_forward ) ; 
+               store_water+= max_limit- height[i];
+              
+          }
+                 
+       }   
+                  
+        cout << " net water to be stored in given structure is="<< store_water;  
+                       
+
+    return 0;
+}
