@@ -1,0 +1,44 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using name space std ;
+int main() {
+ // Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std ; 
+
+int main() {
+     int array [7]= {4,3,2,1,2,7,6};
+     
+     int missing ;
+       for ( int e = 0 ; e < 8 ; e ++)
+        {   if (array [e] == d )
+              {
+                   count += 1 ;
+                 if ( count >1)
+                  { cout << " repeted number = "<< d ;}
+              }
+                                                                                                                                          
+              }
+               }
+               
+         missing = d ;
+         cout << "missing number"  <<missing ;
+              
+              
+             return 0 ;
+                =
+              }
+         
+               
+        }
+ 
+      
+          
+      }
+             
+      cout << "missing number"   << missing ;     
+             
+   
+    return 0;
+}
+   
