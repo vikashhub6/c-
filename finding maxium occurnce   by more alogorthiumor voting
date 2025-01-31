@@ -1,10 +1,10 @@
 // Online C++ compiler to run C++ program online
 #include <iostream>
-
+// its use for finding maximum occurence but if in question ask to reply whether this maximum crossing n /2 or not then verfy it 
 using namespace std ;
 // more  voting alogorthium 
 int main() {
-    int array[11]= {3,3,2,1,3,5,5,5,5,5,5 };
+    int array[11]= {3,3,2,1,5,3,5,5,5,5,5 };
      int candidate= array[0];
       int count = 1 ;
       for ( int c = 1 ; c< 11 ; c++)
@@ -14,7 +14,7 @@ int main() {
             if (array[c]!=candidate)
             count--;
             if (count==0)
-             {candidate = array[c+1];
+             {candidate = array[c];
               count = 1;}
             
         }
