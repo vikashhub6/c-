@@ -1,0 +1,36 @@
+
+#include <iostream>
+using namespace std ; 
+
+int main() {
+    
+    int size ;
+    cout << " enter the value of size " ;
+    cin >> size;
+    
+     int array [1000];
+     cout << " enter the value of array";
+     for(int c=0 ; c<size;c++)
+        cin >> array[c];
+     
+     int missing ;
+     for (int d=1;d<size+1;d++)
+      {int count= 0 ;
+       for(int e = 0 ;e<size;e++)
+        { if(array[e]==d)
+           count+=1;}
+            
+        
+          if(count>1)
+             {cout<<"repeted number="<<d;}
+          
+       
+          
+          if (count==0)  
+          {  missing= d ;
+            cout<< "missing="<< missing;}
+      }
+   
+    return 0;
+}
+   
