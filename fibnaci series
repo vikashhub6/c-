@@ -1,0 +1,13 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std ;
+// fibonacci series // 0 1 1 2 3 5 8 13 
+int main() {
+    int array [7]= {0,1 };
+     for (int c= 2; c <7 ; c++)
+        { array[c]= array[c-1]+array[c-2];
+            
+        }
+        cout << " the seventh element of setriex is ;"<< array[6];
+    return 0;
+}
