@@ -1,0 +1,26 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<climits>
+using namespace std ;
+
+int main() {
+    int array[11]= {3,3,2,3,1,3,2,9,1,3,10   };
+    int major_element;
+    int former_count = INT_MIN;
+    for ( int i= 1;i<12; i++)
+      {int count=0;
+       for (int c= 0 ; c<11; c++)
+         {if( array[c]==i)
+            count+=1 ; 
+         }
+          if (former_count<count)
+           { major_element= i ;
+             former_count = count ; 
+              
+          }
+      }                         
+          cout << " the most occur element is " << major_element ;
+      
+
+    return 0;
+}
