@@ -1,0 +1,34 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std ; 
+
+int main() {
+    // we have to find the minimum value of maxiumum page alloted to //student 
+ int   page[4]={2,1,3,4};
+   int  array [11]={0 ,1,2,3,4,5,6,7,8,9,10};
+    // we will se binary serch if we are sure that in every stage we //will get half of range for serching 
+int total= 10 ;
+int start = 0 , end = total;
+int ans ;
+while (start < end )
+{int mid = start + end-start/2 ;
+//check if this is valid for distribution or not 
+int d = array[mid];
+ans=d;
+int sum1= 0,sum2=0;
+for(int c = 0 ;c<4; c++ )
+{sum1+=array[c];
+  if(sum1>d)
+   break;}
+  sum2= total-sum1;
+
+if(sum1<d&&sum2<d)
+  end = mid-1;
+ else
+ start=mid+1;}
+ cout << "vikash answer"<< ans ;
+
+
+
+    return 0;
+}
