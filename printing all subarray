@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int array[7] = {3, -4, 5, 4, -1, 7, -8};
+  
+    // Loop through all possible start and end indices for subarrays
+    for (int s = 0; s < 7; s++) {
+        for (int e = s; e < 7; e++) {  // Make sure e >= s
+            for (int p = s; p <= e; p++) {
+                cout << array[p] << " ";
+            }
+            cout << endl;  // For a new subarray
+        }
+    }
+  
+    return 0;
+}
