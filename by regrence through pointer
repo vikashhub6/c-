@@ -1,0 +1,15 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std ;
+void change(int* ptr){  // by refrence through pointer.
+     *ptr= 30;}
+     
+     
+    
+
+int main() {
+    int a = 27 ;
+    change(&a);
+    cout << a ;
+  
+        return 0;}
