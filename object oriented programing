@@ -7,41 +7,52 @@ class Teacher {
     // Properties/Attributes
 private:
     float salary;  // Fixed typo from slary to salary
+
 public:
-    constructor(){
-    cout << "vikash kumar is king";
+   
+
+    // Constructor to initialize the teacher object
+  Teacher(string name, string dept, string subject,float salary) {
+      this-> name = name;       // Assign name
+      this-> dept = dept;       // Assign department
+       this-> subject = subject;    // Assign subject
+        this-> salary = salary;   // Assign salary
     }
-    string name;
+    //this is keyword which is used as to indiacte (name,dept //, subject,salary)of  teacher class not parameter .
+   // its done to not get confuse .
+string name;
     string dept;
     string subject;
-    void setsalary(float a){
-        salary=a;
+
+    // Method to set salary
+    void setsalary(float a) {
+        salary = a;
     }
-    float getsalary(){
+
+    // Method to get salary
+    float getsalary() {
         return salary;
     }
+
+    // Method to change department
     void changeDept(string newDept) {
         dept = newDept;
-        
     }
 
-    
-
-};// phli baar semicolumn lgta h curly bracket ke baad .
+    // Method to print teacher's info
+    void getinfo() {
+        cout << "Name: " << name << endl;
+        cout << "Subject: " << subject << endl;
+        cout << "Department: " << dept << endl;
+        cout << "Salary: " << salary << endl;
+    }
+};
 
 int main() {
-    // Create a teacher object
-    Teacher t1;
-    t1.name = "Vikash";
-    t1.dept = "Science";
-    
-    t1.subject = "English";
+    // Creating a Teacher object with initialized values
+    Teacher t1("Vikash", "Computer Science", "C++", 23000);
+    t1.getinfo();  // Displaying the information of teacher t1
 
-    // Change department using method
-    t1.changeDept("Mechanical");
-
-    cout << t1.name<<endl;// direct t1 ko acces nhi kar skte just kike array we cant acces all element we need to give index ;
-t1.setsalary(34.56);
-cout << t1.getsalary();
     return 0;
 }
+
