@@ -1,0 +1,15 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std ;
+void change(int &b ){  // by refrence through alias . 
+     b=67 ;}
+     
+     
+    
+
+int main() {
+    int a = 27 ;
+    change(a);
+    cout << a ;
+  
+        return 0;}
