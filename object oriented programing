@@ -6,31 +6,36 @@ using namespace std;
 class Teacher {
     // Properties/Attributes
 private:
-    float salary;  // Fixed typo from slary to salary
-
-public:
-   
-
-    // Constructor to initialize the teacher object
-  Teacher(string name, string dept, string subject,float salary) {
-      this-> name = name;       // Assign name
-      this-> dept = dept;       // Assign department
-       this-> subject = subject;    // Assign subject
-        this-> salary = salary;   // Assign salary
-    }
-    //this is keyword which is used as to indiacte (name,dept //, subject,salary)of  teacher class not parameter .
-   // its done to not get confuse .
-string name;
+    string name;
     string dept;
     string subject;
+    float salary;
+
+public:
+    // Constructor to initialize the teacher object
+    Teacher(string name, string dept, string subject, float salary) {
+        this->name = name;         // Assign name
+        this->dept = dept;         // Assign department
+        this->subject = subject;   // Assign subject
+        this->salary = salary;     // Assign salary
+    }
+
+    // Copy constructor
+    Teacher( Teacher &t1) { // for forming copy constructer //we need to use pass by refrence .
+    // also while using object an object it is necessary to //give its class too .
+        this->name = t1.name;
+        this->dept = t1.dept;
+        this->subject = t1.subject;
+        this->salary = t1.salary;
+    }
 
     // Method to set salary
-    void setsalary(float a) {
+    void setSalary(float a) {
         salary = a;
     }
 
     // Method to get salary
-    float getsalary() {
+    float getSalary() {
         return salary;
     }
 
@@ -40,7 +45,7 @@ string name;
     }
 
     // Method to print teacher's info
-    void getinfo() {
+    void getInfo() const {
         cout << "Name: " << name << endl;
         cout << "Subject: " << subject << endl;
         cout << "Department: " << dept << endl;
@@ -51,7 +56,11 @@ string name;
 int main() {
     // Creating a Teacher object with initialized values
     Teacher t1("Vikash", "Computer Science", "C++", 23000);
-    t1.getinfo();  // Displaying the information of teacher t1
+    t1.getInfo();  // Displaying the information of teacher t1
+
+    // Creating a copy of teacher t1 using copy constructor
+    Teacher t2(t1);
+    t2.getInfo();  // Displaying the information of teacher t2 (copy of t1)
 
     return 0;
 }
