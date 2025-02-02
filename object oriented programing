@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Class to represent a teacher
+class Teacher {
+    // Properties/Attributes
+private:
+    float salary;  // Fixed typo from slary to salary
+public:
+    string name;
+    string dept;
+    string subject;
+    void setsalary(float a){
+        salary=a;
+    }
+    float getsalary(){
+        return salary;
+    }
+    void changeDept(string newDept) {
+        dept = newDept;
+        
+    }
+
+    
+
+};
+
+int main() {
+    // Create a teacher object
+    Teacher t1;
+    t1.name = "Vikash";
+    t1.dept = "Science";
+    
+    t1.subject = "English";
+
+    // Change department using method
+    t1.changeDept("Mechanical");
+
+    cout << t1.name<<endl;// direct t1 ko acces nhi kar skte just kike array we cant acces all element we need to give index ;
+t1.setsalary(34.56);
+cout << t1.getsalary();
+    return 0;
+}
