@@ -8,6 +8,9 @@ class Teacher {
 private:
     float salary;  // Fixed typo from slary to salary
 public:
+    constructor(){
+    cout << "vikash kumar is king";
+    }
     string name;
     string dept;
     string subject;
@@ -24,7 +27,7 @@ public:
 
     
 
-};
+};// phli baar semicolumn lgta h curly bracket ke baad .
 
 int main() {
     // Create a teacher object
